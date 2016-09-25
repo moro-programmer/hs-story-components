@@ -14,9 +14,9 @@ stories.addWithInfo('active CalendarButton', () => (
 ),{ inline: true });
 
 stories.addWithInfo('CalendarButton without header',()=>(
-  <CalendarButton text='+'/>
+  <CalendarButton text='+' active={boolean('active',true)}/>
 ),{ inline: true });
 
 stories.addWithInfo('current date',()=>(
-  <CalendarButton date={date('date', new Date())}/>
+  <CalendarButton date={date('date', new Date())} active={boolean('active',true)}/>
 ),{ inline: true });
