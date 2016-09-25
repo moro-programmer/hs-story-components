@@ -5,11 +5,11 @@ import './CalendarButton.scss';
 
 class CalendarButton extends Component {
     render() {
-        const {active, onClick, className, children} = this.props;
+        const {active, onClick, className, children, ...rest} = this.props;
         const {header, text} = this.getData();
 
         return (
-            <div {...this.props}
+            <div {...rest}
                  onClick={onClick}
                  className={classnames(className, 'hs-calendar-button', {'hs-calendar-button--active': active})}>
                 <div className='hs-calendar-button__header'>{header.toUpperCase()}</div>

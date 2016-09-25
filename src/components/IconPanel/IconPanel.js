@@ -3,10 +3,10 @@ import classNames from 'classnames';
 import './IconPanel.scss';
 
 const IconPanel = (props)=> {
-    const {icon, iconAlign = 'baseline'} = props;
+    const {icon, iconAlign = 'baseline', ...rest} = props;
 
     return (
-        <div {...props} className={classNames('hs-icon-panel', props.className)}>
+        <div {...rest} className={classNames('hs-icon-panel', props.className)}>
             <span className='icon-block' style={{verticalAlign: iconAlign}}>
                 <i className={classNames('ico', `${icon}`, 'icon')}/>
             </span>

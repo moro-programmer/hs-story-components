@@ -1,0 +1,133 @@
+/*
+* Most of these rules are based upon font awesomes styles
+
+*/
+@import url("icon-styles-base.css");
+
+.ico {
+	display: inline-block;
+	font: normal normal normal 18px 'HotSchedules-Font';
+	font-style: inherit;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	vertical-align: middle;
+}
+
+.ico-halfx {
+	font-size: 14px;
+}
+
+.ico-1halfx{
+	font-size: 20px;
+}
+
+.ico-2x {
+	font-size: 24px;
+}
+
+.ico-2halfx {
+	font-size: 36px;
+}
+
+.ico-3x {
+	font-size: 48px;
+}
+
+.ico-4x {
+	font-size: 56px;
+}
+
+.ico-spin {
+	animation: ico-spin 2s infinite linear;	
+	-webkit-animation: ico-spin 2s infinite linear;
+}
+
+@keyframes ico-spin {
+	from {
+		transform: rotate(0deg);
+		-webkit-transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+		-webkit-transform: rotate(360deg);
+	}
+}
+
+@-webkit-keyframes ico-spin {
+	from {
+		transform: rotate(0deg);
+		-webkit-transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+		-webkit-transform: rotate(360deg);
+	}	
+}
+
+.ico-rotate-45 {
+	transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+}
+
+.ico-rotate-90 {
+	transform: rotate(90deg);
+	-webkit-transform: rotate(90deg);
+	-ms-transform: rotate(90deg); 
+}
+
+.ico-rotate-180 {
+	transform: rotate(180deg);
+	-webkit-transform: rotate(180deg);
+	-ms-transform: rotate(180deg); 
+}
+
+.ico-rotate-270 {
+	transform: rotate(270deg);
+	-webkit-transform: rotate(270deg);
+	-ms-transform: rotate(270deg); 
+}
+
+.ico-flip-horiz {
+	transform: scale(-1, 1);
+	-webkit-transform: scale(-1, 1);
+	-ms-transform: scale(-1, 1);
+}
+
+.ico-flip-vert {
+	transform: scale(1, -1);
+	-webkit-transform: scale(1, -1);
+	-ms-transform: scale(1, -1);
+}
+
+.ico-stack {
+  position: relative;
+  display: inline-block;
+  width: 2em; 
+  height: 2em; 
+  line-height: 2em; 
+  vertical-align: middle;
+}
+.ico-stack-1x,
+.ico-stack-2x,
+.ico-stack-2halfx{
+  position: absolute;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+.ico-stack-1x {
+  line-height: inherit;
+}
+.ico-stack-2x {
+  font-size: 2em;
+}
+
+.ico-2halfx {
+	font-size: 2.5em;
+}
+
+/* Vertically align icons in buttons */
+.button.secondary i.ico {
+	vertical-align: sub;
+}

@@ -1,0 +1,18 @@
+exports[`test renders correctly 1`] = `
+<div
+  className="hs-calendar-button"
+  dateHeaderFormat="MMM"
+  dateTextFormat="D"
+  header="---"
+  onClick={undefined}
+  text="+">
+  <div
+    className="hs-calendar-button__header">
+    ---
+  </div>
+  <div
+    className="hs-calendar-button__text">
+    +
+  </div>
+</div>
+`;

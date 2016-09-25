@@ -58,6 +58,10 @@ module.exports = {
                 test: /\.sass|\.scss$/,
                 loaders: ["style-loader", "css-loader", "postcss-loader", "sass-loader"]
             },
+            {
+                test: /\.css$/,
+                loaders: ["style-loader", "css-loader","postcss-loader"]
+            },
 
             {
                 test: /\.png|\.svg|\.ttf|\.woff2|\.woff|\.eot|\.json/,

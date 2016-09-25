@@ -1,5 +1,6 @@
 import {configure,addDecorator, setAddon, storiesOf} from '@kadira/storybook';
 import infoAddon from '@kadira/react-storybook-addon-info';
+import '../styles/icomoon/icon-styles.css';
 setAddon(infoAddon);
 
 const stories = require.context('../src/', true, /\.story\.js$/);

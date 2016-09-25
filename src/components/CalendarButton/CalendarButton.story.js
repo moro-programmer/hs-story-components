@@ -1,16 +1,22 @@
 import React from 'react';
-import { storiesOf } from '@kadira/storybook';
+import { storiesOf, action } from '@kadira/storybook';
 import CalendarButton from './CalendarButton';
-import { withKnobs, text, boolean, number } from '@kadira/storybook-addon-knobs';
+import { withKnobs, text, boolean,date } from '@kadira/storybook-addon-knobs';
 
-storiesOf('CalendarButton', module)
-    .addDecorator(withKnobs)
-    .addWithInfo('active CalendarButton', () => (
-          <CalendarButton active={boolean('active',true)} header='SEP' text='7'/>
-    ),{ inline: true })
-    .add('inactive CalendarButton',()=>{
-          <CalendarButton header='SEP' text='7'/>
-    })
-    .add('CalendarButton without header',()=>{
-          <CalendarButton text='+'/>
-    });
+const stories = storiesOf('CalendarButton', module).addDecorator(withKnobs);
+
+stories.addWithInfo('active CalendarButton', () => (
+  <CalendarButton
+    active={boolean('active',true)}
+    onClick={action('clicked')}
+    header={text('header','SEP')}
+    text={text('text', '7')}/>
+),{ inline: true });
+
+stories.addWithInfo('CalendarButton without header',()=>(
+  <CalendarButton text='+'/>
+),{ inline: true });
+
+stories.addWithInfo('current date',()=>(
+  <CalendarButton date={date('date', new Date())}/>
+),{ inline: true });
